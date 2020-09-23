@@ -11,6 +11,9 @@ public with sharing class SmartMigrationCreatorClass {
         String baseUrl = URL.getSalesforceBaseUrl().toExternalForm();
         request.setEndpoint(baseUrl+'/services/data/v49.0/tooling/query/?q=SELECT+Name+from+ApexClass');
         request.setMethod('GET');
+        System.debug('Test changes');
+        System.debug('Test changes1111');
+
         Http http=new Http();
         HttpResponse response=http.send(request);
         System.debug('*****'+response.getBody());
